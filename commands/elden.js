@@ -9,7 +9,8 @@ module.exports = {
 		.setDescription('Days until Elden Ring'),
 	async execute(interaction) {
         const today = mjs()
-        const er = mjs("21012022", "DDMMYYYY")
+        let er = mjs("21012022", "DDMMYYYY")
+        er.subtract(1, "h")
         let dur = mjs.duration(er.diff(today))
         
         const days = Math.floor(dur.asDays())
