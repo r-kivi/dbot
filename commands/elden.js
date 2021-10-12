@@ -6,7 +6,7 @@ mjs.locale('fi')
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('er')
-		.setDescription('Days until Elden Ring'),
+		.setDescription('Days until the release of the highly anticipated video game Elden Ring'),
 	async execute(interaction) {
         const today = mjs()
         let er = mjs("21012022", "DDMMYYYY")
@@ -18,7 +18,7 @@ module.exports = {
 
         const hours = Math.round(dur.asHours())
 
-        reply = String(days) + " days and " + String(hours) + " hours until Elden Ring!"
+        reply = String(days) + " days and " + String(hours) + " hours until Elden Ring release!"
 		await interaction.reply(reply);
 	},
 };
