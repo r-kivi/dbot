@@ -10,7 +10,7 @@ module.exports = {
 	async execute(interaction) {
         const today = mjs()
         let er = mjs("21012022", "DDMMYYYY")
-        er.subtract(1, "h")
+        er.add(1, "h")
         let dur = mjs.duration(er.diff(today))
         
         const days = Math.floor(dur.asDays())
