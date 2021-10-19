@@ -1,16 +1,16 @@
-const { SlashCommandBuilder } = require('@discordjs/builders');
+const { SlashCommandBuilder } = require("@discordjs/builders");
 
-mjs = require('moment')
-mjs.locale('fi')
+mjs = require("moment")
+mjs.locale("fi")
 
 module.exports = {
 	data: new SlashCommandBuilder()
-		.setName('er')
-		.setDescription('Days until the release of the highly anticipated video game Elden Ring'),
+		.setName("er")
+		.setDescription("Days until the release of the highly anticipated video game Elden Ring"),
 	async execute(interaction) {
         const today = mjs()
         let er = mjs("25022022", "DDMMYYYY")
-        er.add(1, "h")
+        er.subtract(3, "h")
         let dur = mjs.duration(er.diff(today))
 
         const days = Math.floor(dur.asDays())
