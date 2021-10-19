@@ -1,5 +1,5 @@
 # dbot
-A simple discord bot framework I built. Commands are added by creating new files in the commands folder and will be automatically added by running deploy-cmd.js. Features one example command that also shows how this is done.
+A simple base for a Discord bot I built. Commands are added by creating new files in the commands folder and will be registered by running deploy-cmd.js. Features one example command that also shows how this is done.
 
 ```bash
 npm install
