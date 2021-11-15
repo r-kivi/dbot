@@ -10,7 +10,7 @@ module.exports = {
 	async execute(interaction) {
         const today = mjs()
         let er = mjs("25022022", "DDMMYYYY")
-        er.subtract(3, "h")
+        er.subtract(2, "h")
         let dur = mjs.duration(er.diff(today))
 
         const days = Math.floor(dur.asDays())
@@ -18,7 +18,7 @@ module.exports = {
 
         const hours = Math.round(dur.asHours())
 
-        reply = String(days) + " days and " + String(hours) + " hours until Elden Ring release!"
+        reply = String(days) + " days and " + String(hours) + " hours until Elden Ring release day!"
 		await interaction.reply(reply);
 	},
 };
